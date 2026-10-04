@@ -1,0 +1,11 @@
+{
+  "name": "kristina-shynkaruk-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "dev": "node server.cjs",
+    "check": "node --check dist/app.js",
+    "build:github": "node build-github.mjs"
+  }
+}
