@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.cjs",
     "dev": "node server.cjs",
-    "check": "node --check dist/app.js",
+    "check": "node --check dist/app.js && node --check dist/managed-stories.js && node --check dist/managed-portfolio.js && node --check dist/admin/admin.js && node --check server.cjs",
+    "test": "node --test api/*.test.cjs",
     "build:github": "node build-github.mjs"
   }
 }

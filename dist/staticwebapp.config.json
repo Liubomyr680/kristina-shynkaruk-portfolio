@@ -1,0 +1,13 @@
+{
+ "routes":[
+  {"route":"/admin/login.html","allowedRoles":["anonymous"]},
+  {"route":"/admin/login.js","allowedRoles":["anonymous"]},
+  {"route":"/admin/admin.css","allowedRoles":["anonymous"]},
+  {"route":"/admin","rewrite":"/admin/index.html","allowedRoles":["owner"]},
+  {"route":"/admin/*","allowedRoles":["owner"]},
+  {"route":"/api/admin/*","allowedRoles":["owner"]}
+ ],
+ "responseOverrides":{"401":{"redirect":"/admin/login.html","statusCode":302}},
+ "platform":{"apiRuntime":"node:22"},
+ "globalHeaders":{"X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin"}
+}
