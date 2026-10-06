@@ -1,1 +1,14 @@
-{"name":"wedding-admin-api","version":"1.0.0","private":true,"main":"azure.js","engines":{"node":">=22"},"dependencies":{"@azure/functions":"^4.7.0","@azure/storage-blob":"^12.27.0","kristina-shynkaruk-portfolio":"file:.."}}
+{
+  "name": "wedding-admin-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "azure.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.7.0",
+    "@azure/storage-blob": "^12.27.0",
+    "kristina-shynkaruk-portfolio": "file:.."
+  }
+}
