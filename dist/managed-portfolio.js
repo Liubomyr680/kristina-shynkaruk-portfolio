@@ -5,7 +5,9 @@ function renderManagedPortfolio(){
  managedPortfolio.forEach((photo,index)=>{
   const figure=document.createElement('figure'),button=document.createElement('button'),img=document.createElement('img');
   button.className='photo-button';button.setAttribute('aria-label',localeText('open')+' '+localeText('photo')+' '+(index+1));
-  img.src=photo.url;img.loading='lazy';
+  img.loading=index<3?'eager':'lazy';
+  img.fetchPriority=index<3?'high':'auto';
+  img.src=photo.url;
   const originalIndex=photos.findIndex(p=>'sample-'+p[0]===photo.id);
   img.alt=originalIndex>=0?localizePhoto(photos[originalIndex],originalIndex)[2]:localeText('photo')+' '+(index+1);
   button.append(img);button.onclick=()=>{managedLightbox=managedPortfolio;showManagedPhoto(index);lightbox.showModal();};figure.append(button);gallery.append(figure);
